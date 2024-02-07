@@ -1,3 +1,4 @@
+// import react and file resouces along with helper function
 import { useState } from 'react';
 import { validateEmail } from '../utils/helpers';
 import Button from 'react-bootstrap/Button';
@@ -6,7 +7,7 @@ import Form from 'react-bootstrap/Form';
 
 
 export default function ContactPage() {
-
+  // via useState-react to keep track of fields in the contact form, and hangle input changes to display error message if needed
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -18,6 +19,7 @@ export default function ContactPage() {
     const inputType = target.id;
     const inputValue = target.value;
 
+    // username field change handling
     if (inputType === 'nameInput' && inputValue) {
       setName(inputValue);
       setErrorMessage('');
@@ -25,6 +27,7 @@ export default function ContactPage() {
       setErrorMessage(`Name Required!`)
     }
 
+    // email field change handling
     if (inputType === 'emailInput' && inputValue && validateEmail(inputValue)) {
       setEmail(inputValue);
       setErrorMessage('');
@@ -34,6 +37,7 @@ export default function ContactPage() {
       setErrorMessage(`Email Required!`)
     }
 
+    // message field change handling
     if (inputType === 'messageInput' && inputValue) {
       setMessage(inputValue);
       setErrorMessage('');
@@ -43,6 +47,7 @@ export default function ContactPage() {
   };
 
   return (
+    // bootstrap-form displayed as the contact component
     <div className="container pt-4 myOutlet">
       <h2>Contact</h2>
       <Form>

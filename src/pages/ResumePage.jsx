@@ -1,7 +1,9 @@
+// import the resume pdf file from assets
 import myFile from "../assets/Syed-Kazmi-Resume.pdf";
 
 export default function ResumePage() {
     return (
+        // bulletpoint resume displayed on page, with a download button for the user to get the actual resume file
         <div className="container pt-4 myOutlet">
             <h2>Resume</h2>
             <div>

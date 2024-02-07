@@ -1,5 +1,6 @@
 export default function Footer() {
     return (
+        // renders the footer component with linked svg icons for GitHub, LinkedIn and Stack Overflow.
         <div id="myFooter" className="container">
             <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
                 <div className="col-md-4 d-flex align-items-center">

@@ -1,3 +1,4 @@
+// any endpoints not serviced will be redirected to this page
 import { useRouteError } from 'react-router-dom';
 
 export default function ErrorPage() {

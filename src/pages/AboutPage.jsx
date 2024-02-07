@@ -1,4 +1,4 @@
-// This is a static page mocking an "About Us" section for our fake user data
+// About Me landing page with a profile picture and information
 import profileImage from "../assets/profilePic.jpg";
 
 export default function AboutPage() {

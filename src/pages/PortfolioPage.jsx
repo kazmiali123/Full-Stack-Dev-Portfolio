@@ -1,3 +1,4 @@
+// import all image resources for card displays
 import ProjOne from "../assets/Landing Page View.png";
 import ProjTwo from "../assets/outdoor-companion.jpg";
 import ProjThree from "../assets/weather-dashboard.png";
@@ -5,7 +6,9 @@ import ProjFour from "../assets/jate-pwa.png";
 import ProjFive from "../assets/javascript-quiz.jpg";
 import ProjSix from "../assets/mern.png";
 
+// default export function for portfolio component
 export default function PortfolioPage() {
+    // handles the image onclick behaviour and redirect user to respective project deployed website
     const linkOne = (projectLink) => {
         var a = document.createElement("a");
         a.href = projectLink;
@@ -17,9 +20,11 @@ export default function PortfolioPage() {
     };
 
     return (
+        // displayed on the website on the portfolio tab, using bootstrap masonry layout with svg icons that link to deployed websites and github repositories.
         <div className="container pt-4 myOutlet ">
             <h2>Portfolio</h2>
             <div className="row" data-masonry='{"percentPosition": true }'>
+                {/* {First protfolio project card display and links} */}
                 <div className="col-sm-6 col-lg-4 mb-4">
                     <div className="card">
                         <img
